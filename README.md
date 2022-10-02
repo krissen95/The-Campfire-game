@@ -7,5 +7,5 @@ A timebased textadventure where you click on hypperlinks to move between areas a
  <br>
  Beside running the [HTML-file](https://github.com/krissen95/The-Campfire-game/blob/main/HarloweJanuaryB.html) in browser it can also be run inside the [twine](https://twinery.org) program for added support on visualized branching.
  <br><br>
- <img width="50%" src="https://github.com/krissen95/The-Campfire-game/blob/main/Images/ExampleTwine.jpg">
+ <img width="50%" src="https://github.com/krissendev/The-Campfire-game/blob/main/Images/ExampleTwine.jpg">
  
