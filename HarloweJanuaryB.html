@@ -11,7 +11,7 @@
 
 <tw-story></tw-story>
 
-<tw-storydata name="HarloweJanuaryB" startnode="1" creator="Twine" creator-version="2.2.1" ifid="E2E1AFE5-78F6-4A13-BFDB-52ED51A16440" zoom="1" format="Harlowe" format-version="2.1.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.redo{ display:none;}
+<tw-storydata name="HarloweJanuaryB" startnode="1" creator="Twine" creator-version="2.9.0" format="Harlowe" format-version="2.1.0" ifid="E2E1AFE5-78F6-4A13-BFDB-52ED51A16440" options="" tags="" zoom="1" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">.redo{ display:none;}
 .undo{ display:none;}
 
 
@@ -47,7 +47,7 @@
 It&#39;s a dark at night and you find safety by the warmth and light of the. 
 But soon the fire will fade and there will be nothing to hold back that which lurks in the shadows.
 [[Find more wood]]
-</tw-passagedata><tw-passagedata pid="2" name="Init" tags="startup" position="202,601" size="100,100">{
+</tw-passagedata><tw-passagedata pid="2" name="Init" tags="startup" position="200,600" size="100,100">{
 &lt;!-- Sets basic values and timers --&gt;
 (set: $campfireTimer to 10)
 (set: $torchTimer to 100)
@@ -60,7 +60,7 @@ But soon the fire will fade and there will be nothing to hold back that which lu
 (set: $worldItems to (shuffled:&quot;axe&quot;, &quot;map&quot;,&quot;compass&quot;,&quot;flare&quot;,&quot;flare&quot;,&quot;backpack&quot;,&quot;bush&quot;,&quot;bush&quot;,&quot;branch&quot;,&quot;branch&quot;,&quot;branch&quot;,&quot;branch&quot; )) 
 (set:$playerInventory to (array:0,0,0,0,0,0,0,0,0,0,0,0))
 (set:$worldItemBools to (array:true,true,true,true,true,true,true,true,true,true,true,true))
-}</tw-passagedata><tw-passagedata pid="3" name="Header" tags="header" position="328,600" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="3" name="Header" tags="header" position="325,600" size="100,100">{
 &lt;!-- Updates Game Time: campfire, torch, daylight .Always runs --&gt;
 (live: 1s)[(set: $daylightTimer to it -1)(set: $campfireTimer to it - 1)(set: $torchTimer to it - 1)]
 
@@ -86,23 +86,23 @@ Inventory:(set: $loopCounter to 0)
 (set: $currentPassageTag to ((passage:)&#39;s tags))(display: &quot;PassageConverterNumber&quot;)(display: &quot;ItemTracker&quot;)(display: &quot;PassageConverterText&quot;)
 
 &lt;br&gt;
-(print: &#39;&lt;img id=&quot;currentPhoto&quot; src=&quot;images/&#39; + $ConvertedPassageName + &#39;.JPG&quot; width=&quot;500&quot; height=&quot;300&quot;
-onerror=&quot;this.onerror=null;this.src=\&#39;images/Error.JPG\&#39;;&quot;&gt;&#39;)
+(print: &#39;&lt;img id=&quot;currentPhoto&quot; src=&quot;Images/&#39; + $ConvertedPassageName + &#39;.jpg&quot; width=&quot;500&quot; height=&quot;300&quot;
+onerror=&quot;this.onerror=null;this.src=\&#39;Images/Error.jpg\&#39;;&quot;&gt;&#39;)
 
 }
-</tw-passagedata><tw-passagedata pid="4" name="Footer" tags="footer" position="448,602" size="100,100"></tw-passagedata><tw-passagedata pid="5" name="Find more wood" tags="" position="1016,1669" size="100,100">As you leave the campfire you (colour: &quot;#ceff95&quot;)[torch] one of your wooden branches in the fire.
+</tw-passagedata><tw-passagedata pid="4" name="Footer" tags="footer" position="450,600" size="100,100"></tw-passagedata><tw-passagedata pid="5" name="Find more wood" tags="" position="1025,1675" size="100,100">As you leave the campfire you (colour: &quot;#ceff95&quot;)[torch] one of your wooden branches in the fire.
 Head [[north|campfirenorth]] towards the mountain peak
 Head [[south|campfiresouth]] along the river
 Head [[east|campfireeast]] deeper into the forest
 Head [[east|campfirwest]] deeper into the forest
-Head back to the [[campfire|NewCampfire]] </tw-passagedata><tw-passagedata pid="6" name="campfirenorth" tags="" position="1191,1397" size="100,100">As you walk up the mountain trail the air gets colder. 
+Head back to the [[campfire|NewCampfire]] </tw-passagedata><tw-passagedata pid="6" name="campfirenorth" tags="" position="1200,1400" size="100,100">As you walk up the mountain trail the air gets colder. 
 Along the trail besides the desert of nothingness there are some moss covered bolders (if: $vCampfirenorthBush is true)[
  [[,bushes (set:$vCampfirenorthBush to false)(set: $wood +=1)|campfirenorth]]] and old treetrunks.
 
 Keep walking [[north the trail|Northup1A]]
 Head [[back south to crossroad|Find more wood]]
-</tw-passagedata><tw-passagedata pid="7" name="campfiresouth" tags="" position="1129,1764" size="100,100">Head [[back to the crossroad|Find more wood]]</tw-passagedata><tw-passagedata pid="8" name="campfireeast" tags="" position="1310,1617" size="100,100">Head [[back to the crossroad|Find more wood]]</tw-passagedata><tw-passagedata pid="9" name="NewCampfire" tags="" position="999,1429" size="100,100">Head [[back to the crossroad|Find more wood]]</tw-passagedata><tw-passagedata pid="10" name="Northup1A" tags="" position="1189,1248" size="100,100">[[south|campfirenorth]]
-[[north|Northup1AB]]</tw-passagedata><tw-passagedata pid="11" name="Bad Ending" tags="" position="328,851" size="100,100">You died!</tw-passagedata><tw-passagedata pid="12" name="campfirwest" tags="" position="839,1746" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="13" name="Northup1B" tags="" position="1199,994" size="100,100">[[South|Northup1AB]]
+</tw-passagedata><tw-passagedata pid="7" name="campfiresouth" tags="" position="1129,1764" size="100,100">Head [[back to the crossroad|Find more wood]]</tw-passagedata><tw-passagedata pid="8" name="campfireeast" tags="" position="1310,1617" size="100,100">Head [[back to the crossroad|Find more wood]]</tw-passagedata><tw-passagedata pid="9" name="NewCampfire" tags="" position="1000,1425" size="100,100">Head [[back to the crossroad|Find more wood]]</tw-passagedata><tw-passagedata pid="10" name="Northup1A" tags="" position="1189,1248" size="100,100">[[south|campfirenorth]]
+[[north|Northup1AB]]</tw-passagedata><tw-passagedata pid="11" name="Bad Ending" tags="" position="325,850" size="100,100">You died!</tw-passagedata><tw-passagedata pid="12" name="campfirwest" tags="" position="839,1746" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="13" name="Northup1B" tags="" position="1199,994" size="100,100">[[South|Northup1AB]]
 [[West|Northup1C]]
 [[East|Northup1B2]]</tw-passagedata><tw-passagedata pid="14" name="Northup1B2" tags="" position="1352,885" size="100,100">[[South|Northup1B]]
 [[North|Northup1B3]]</tw-passagedata><tw-passagedata pid="15" name="Northup1C" tags="" position="1200,856" size="100,100">[[south|Northup1B]]
@@ -119,16 +119,16 @@ Head [[back south to crossroad|Find more wood]]
 [[north|Northup1C3]]</tw-passagedata><tw-passagedata pid="22" name="Northup1C3" tags="" position="808,514" size="100,100">[[south|Northup1C2]]
 </tw-passagedata><tw-passagedata pid="23" name="Northup1D1" tags="" position="1265,454" size="100,100">[[south|Northup1D]]
 [[north|Northup1DB1]]</tw-passagedata><tw-passagedata pid="24" name="Northup1D2" tags="" position="1432,472" size="100,100">[[south|Northup1D]]</tw-passagedata><tw-passagedata pid="25" name="NorthPeak" tags="" position="1272,42" size="100,100">[[south|Northup1DB2]]
-</tw-passagedata><tw-passagedata pid="26" name="EastHarbor" tags="" position="2234,966" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="Images" tags="" position="198,852" size="100,100"></tw-passagedata><tw-passagedata pid="28" name="Northup1AB" tags="" position="1192,1119" size="100,100">[[south|Northup1A]]
+</tw-passagedata><tw-passagedata pid="26" name="EastHarbor" tags="" position="2234,966" size="100,100">Double-click this passage to edit it.</tw-passagedata><tw-passagedata pid="27" name="Images" tags="" position="200,850" size="100,100"></tw-passagedata><tw-passagedata pid="28" name="Northup1AB" tags="" position="1192,1119" size="100,100">[[south|Northup1A]]
 [[north|Northup1B]]</tw-passagedata><tw-passagedata pid="29" name="Northup1CD" tags="" position="1259,719" size="100,100">[[north|Northup1D]]
 [[south|Northup1C]]</tw-passagedata><tw-passagedata pid="30" name="Northup1DB2" tags="" position="1269,177" size="100,100">[[north|NorthPeak]]
 [[south|Northup1DB1]]</tw-passagedata><tw-passagedata pid="31" name="Northup1DB1" tags="" position="1268,325" size="100,100">[[south|Northup1DB2]]
-[[north|Northup1D1]]</tw-passagedata><tw-passagedata pid="32" name="ItemTracker" tags="" position="325,724" size="100,100">{
+[[north|Northup1D1]]</tw-passagedata><tw-passagedata pid="32" name="ItemTracker" tags="" position="325,725" size="100,100">{
 (if:$ConvertingPassagetonumber &gt; 0)[(set: $specialItem to $worldItems&#39;s $ConvertingPassagetonumber)](else:)[]
 }</tw-passagedata><tw-passagedata pid="33" name="PassageConverterNumber" tags="" position="197,725" size="100,100">{
 (set: $ConvertingPassagetotext to (text: $currentPassageTag))
 (set: $ConvertingPassagetonumber to (num: $ConvertingPassagetotext))
-}</tw-passagedata><tw-passagedata pid="34" name="ItemPickup" tags="" position="451,724" size="100,100">{
+}</tw-passagedata><tw-passagedata pid="34" name="ItemPickup" tags="" position="450,725" size="100,100">{
 (set:$playerInventory&#39;s $ConvertingPassagetonumber to $worldItems&#39;s $ConvertingPassagetonumber)
 (set:$worldItems&#39;s $ConvertingPassagetonumber to 0)
 (set:$worldItemBools&#39;s $ConvertingPassagetonumber to false)
